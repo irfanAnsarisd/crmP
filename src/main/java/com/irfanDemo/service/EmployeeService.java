@@ -46,6 +46,8 @@ public class EmployeeService {
         // dummy code
         System.out.println(dto.getName());
         System.out.println(dto.getMobile());
+          System.out.println(dto.getName());
+        System.out.println(dto.getMobile());
 
         Employee employee = mapToEntity(dto);
         employee.setId(id);
