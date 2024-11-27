@@ -43,6 +43,10 @@ public class EmployeeService {
 
     public EmployeeDto updateEmployee(Long id, EmployeeDto dto) {
 
+        // dummy code
+        System.out.println(dto.getName());
+        System.out.println(dto.getMobile());
+
         Employee employee = mapToEntity(dto);
         employee.setId(id);
         Employee save = employeeRepository.save(employee);

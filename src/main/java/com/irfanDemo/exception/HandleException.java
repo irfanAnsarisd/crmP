@@ -28,18 +28,18 @@ public class HandleException {
 //        return new ResponseEntity<>(errorDetails,HttpStatus.INTERNAL_SERVER_ERROR);
 //    }
 
-//    @ExceptionHandler(ResourceNotFound.class)
-//    public ResponseEntity<ErrorDetails> handleEmployeeNotFoundException(
-//            ResourceNotFound e,
-//            WebRequest request
-//    ){
-//        ErrorDetails errorDetails = new ErrorDetails(
-//                new Date(),
-//                e.getMessage(),
-//                request.getDescription(false)
-//        );
-//        return new ResponseEntity<>(errorDetails,HttpStatus.INTERNAL_SERVER_ERROR);
-//    }
+    @ExceptionHandler(ResourceNotFound.class)
+    public ResponseEntity<ErrorDetails> handleEmployeeNotFoundException(
+            ResourceNotFound e,
+            WebRequest request
+    ){
+        ErrorDetails errorDetails = new ErrorDetails(
+                new Date(),
+                e.getMessage(),
+                request.getDescription(false)
+        );
+        return new ResponseEntity<>(errorDetails,HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorDetails> handleEmployeeNotFoundException(
